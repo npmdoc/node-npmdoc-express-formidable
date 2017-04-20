@@ -1,1 +1,39 @@
-{     "devDependencies": {         "express-formidable": "*",         "electron-lite": "kaizhu256/node-electron-lite#alpha",         "utility2": "kaizhu256/node-utility2#alpha"     },     "name":"npmdoc-express-formidable",     "homepage": "https://github.com/npmdoc/node-npmdoc-express-formidable",     "repository": {         "type": "git",         "url": "https://github.com/npmdoc/node-npmdoc-express-formidable.git"     },     "scripts": {         "build-ci": "utility2 shReadmeTest build_ci.sh"     },     "version": "0.0.1" }
+{
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "description": "#### api documentation for  [express-formidable (v1.0.0)](https://github.com/noraesae/express-formidable)  [![npm package](https://img.shields.io/npm/v/npmdoc-express-formidable.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-express-formidable) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-express-formidable.svg)](https://travis-ci.org/npmdoc/node-npmdoc-express-formidable)",
+    "devDependencies": {
+        "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "express-formidable": "*",
+        "utility2": "kaizhu256/node-utility2#alpha"
+    },
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-express-formidable",
+    "keywords": [
+        "documentation",
+        "express-formidable"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_express_formidable.js",
+    "name": "npmdoc-express-formidable",
+    "nameAlias": "npmdoc_express_formidable",
+    "nameOriginal": "npmdoc-express-formidable",
+    "os": [
+        "darwin",
+        "linux"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/npmdoc/node-npmdoc-express-formidable.git"
+    },
+    "scripts": {
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "npm install \"kaizhu256/node-utility2#alpha\" && utility2 shDeployHeroku",
+        "postinstall": "[ ! -f npm_scripts.sh ] || ./npm_scripts.sh postinstall",
+        "start": "PORT=${PORT:-8080} utility2 start test.js",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
+    },
+    "version": "0.0.1"
+}
